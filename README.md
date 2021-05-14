@@ -1,2 +1,3 @@
-# express-react-starter-app
-A Starter app for quickly starting up an Express / React app
+# Express / React Starter App for services
+
+For getting started with a new Express / React server in no time at all.
