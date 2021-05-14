@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { Box, Flex, Link } from 'rebass';
+
 import logo from './logo.svg';
 import './App.css';
 import HealthCheck from './components/health-check';
@@ -10,12 +13,19 @@ class AppInner extends Component {
     return (
       <div className="App-wrap">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">A new React App</h1>
+          <Flex px={2} color="white" bg="black" alignItems="center">
+            <img src={logo} className="App-logo" alt="logo" />
+            <Box mx="auto" />
+            <Link variant="nav" href="https://nicholasgriffin.dev">
+              Nicholas Griffin
+            </Link>
+          </Flex>
         </header>
-        <AmplifyReduxAuth logoText={'New App'}>
-          <HealthCheck />
-        </AmplifyReduxAuth>
+        <section className="App-main">
+          <AmplifyReduxAuth>
+            <HealthCheck />
+          </AmplifyReduxAuth>
+        </section>
       </div>
     );
   }

@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Box } from 'rebass';
+
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import LoginForm from './LoginForm';
@@ -11,7 +14,14 @@ const mapStateToProps = (state) => ({
 });
 
 const Auth = ({ logoText, authState }) => (
-  <>
+  <Box
+    className="auth_box"
+    sx={{
+      maxWidth: 512,
+      mx: 'auto',
+      px: 3,
+    }}
+  >
     {authState.authStatus === 'signIn' ? (
       <LoginForm logoText={logoText} />
     ) : (
@@ -24,7 +34,7 @@ const Auth = ({ logoText, authState }) => (
     )}
     {authState.authStatus === 'forgotPassword' ? <ForgotPasswordForm /> : <></>}
     {authState.authStatus === 'resetPassword' ? <ResetPasswordForm /> : <></>}
-  </>
+  </Box>
 );
 
 export default compose(connect(mapStateToProps, null))(Auth);

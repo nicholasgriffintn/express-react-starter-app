@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import { compose, withStateHandlers } from 'recompose';
 import { setAuthStatus, login } from '../../store/actions/session';
 import { bindActionCreators } from 'redux';
+
+import { Heading, Button } from 'rebass';
+import { Label, Input } from '@rebass/forms';
+
 import ErrorMessage from './ErrorMessage';
 
 const LoginForm = ({
@@ -17,7 +21,10 @@ const LoginForm = ({
   <div className="auth_main">
     <div className="auth_card">
       <div className="auth_title">
-        <h2>{logoText}</h2>
+        <Heading fontSize={[6]} color="primary">
+          Welcome back!
+        </Heading>
+        <p>Enter your credentials below to sign in</p>
       </div>
       <ErrorMessage errorMessage={error} />
       <form
@@ -29,7 +36,8 @@ const LoginForm = ({
       >
         <div className="auth_form_wrap">
           <div className="auth_form_input">
-            <input
+            <Label htmlFor="username">Username</Label>
+            <Input
               required
               id="username"
               name="username"
@@ -39,7 +47,8 @@ const LoginForm = ({
             />
           </div>
           <div className="auth_form_input">
-            <input
+            <Label htmlFor="password">Password</Label>
+            <Input
               required
               id="password"
               name="password"
@@ -50,18 +59,18 @@ const LoginForm = ({
             />
           </div>
           <div className="auth_card_actions">
-            <button className="btn btn-primary btn-full" type="submit">
+            <Button className="btn btn-primary btn-full" type="submit">
               Login
-            </button>
+            </Button>
           </div>
           <div className="auth_card_actions">
-            <button
+            <Button
               className="btn btn-secondary btn-full"
               type="button"
               onClick={() => setAuthStatus('forgotPassword')}
             >
               Forgot your password?
-            </button>
+            </Button>
           </div>
         </div>
       </form>

@@ -43,7 +43,7 @@ export default compose(
        * The hub is used here to listen to the authentication events from Amplify.
        * @see https://aws-amplify.github.io/docs/js/hub
        */
-      Hub.listen('auth', (capsule: HubCapsule) => {
+      Hub.listen('auth', (capsule) => {
         switch (capsule.payload.event) {
           case 'signIn':
             this.props.authCurrentUser();

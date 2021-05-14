@@ -1,32 +1,56 @@
-.App {
+img.App-logo {
+  max-width: 70px;
+}
+
+header.App-header > div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.auth_box {
+  padding: 10px 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.auth_box .auth_form {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 15px;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.btn {
+  cursor: pointer;
+  padding: 10px 15px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.btn-full {
+  width: 100%;
 }
 
-.App-intro {
-  font-size: large;
+.auth_form_input {
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth_card_actions .btn-full {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  background: #57c1df;
+}
+
+.btn-primary:hover {
+  background: #0000ed;
+}
+
+.btn-secondary {
+  background: #333;
+}
+
+.btn-secondary:hover {
+  background: #000;
 }
