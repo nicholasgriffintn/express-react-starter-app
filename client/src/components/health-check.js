@@ -6,11 +6,11 @@ import { getHealth } from '../store/actions/basic';
 class HealthCheck extends Component {
   static propTypes = {
     getHealth: PropTypes.func.isRequired,
-    health: PropTypes.array.isRequired,
+    health: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
-    health: null,
+    health: {},
   };
 
   componentWillMount() {
